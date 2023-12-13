@@ -98,7 +98,7 @@ const emailTemplate = (
                         <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ffffff;" bgcolor="#ffffff">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                 <tr>
-                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;"> <h3 style="margin-bottom: 0.25rem;">HARU Fashion</h3><br>
+                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;"> <h3 style="margin-bottom: 0.25rem;">Shop</h3><br>
                                         <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> Thank You For Your Order! </h2>
                                     </td>
                                 </tr>
@@ -167,13 +167,13 @@ const emailTemplate = (
                         <td align="center" style="padding: 35px; background-color: #ffffff;" bgcolor="#ffffff">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                 <tr>
-                                    <td align="center"> <h3 style="margin-bottom: 0.25rem;">HARU Fashion</h3> </td>
+                                    <td align="center"> <h3 style="margin-bottom: 0.25rem;">Shop</h3> </td>
                                 </tr>
                                 <tr>
                                     <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; padding: 5px 0 10px 0;">
-                                        <p style="font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;"> No(7), Ground Floor, <br>
-                                          Malikha Building, Yadanar Road, <br>
-                                          Thingangyun, Yangon</p>
+                                        <p style="font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;"> 1NO1, <br>
+                                          ABC, <br>
+                                          CDE</p>
                                     </td>
                                 </tr>
                                 <tr>

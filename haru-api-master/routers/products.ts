@@ -12,11 +12,17 @@ import { adminOnly } from "../middlewares/authHandler";
 
 const router = Router();
 
+// router
+//   .get("/", getProducts)
+//   .get("/count", getProductCount)
+//   .get("/search", searchProducts)
+//   .post("/", adminOnly, createProduct);
+
 router
   .get("/", getProducts)
   .get("/count", getProductCount)
   .get("/search", searchProducts)
-  .post("/", adminOnly, createProduct);
+  .post("/", createProduct);
 
 router
   .get("/:id", getProduct)

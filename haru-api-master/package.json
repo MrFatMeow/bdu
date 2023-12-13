@@ -1,7 +1,6 @@
 {
-  "name": "haru-api",
+  "name": "shop-api",
   "version": "1.0.0",
-  "description": "A RESTful API for Haru-Fashion e-commerce web application.",
   "main": "server.js",
   "scripts": {
     "start": "node dist/server.js",

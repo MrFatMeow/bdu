@@ -130,7 +130,7 @@ export const createOrder = asyncHandler(async (req, res, next) => {
       return next(new ErrorResponse(paymentTypeError, 400));
   }
 
-  // Check payment type is either "STORE_PICKUP", "YANGON", "OTHERS"
+  // Check payment type is either "STORE_PICKUP", "OTHERS"
   if (deliveryType) {
     if (!checkDeliveryType(deliveryType))
       return next(new ErrorResponse(deliveryTypeError, 400));
@@ -208,7 +208,7 @@ export const createOrder = asyncHandler(async (req, res, next) => {
       // send email to user
       await sendMail({
         email: order.customer.email,
-        subject: "Haru Fashion Order Received",
+        subject: "Shop Order Received",
         message,
       });
       res.status(201).json({

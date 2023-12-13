@@ -15,7 +15,7 @@ import { useAuth } from "../context/AuthContext";
 
 // let w = window.innerWidth;
 type PaymentType = "CASH_ON_DELIVERY" | "BANK_TRANSFER";
-type DeliveryType = "STORE_PICKUP" | "YANGON" | "OTHERS";
+type DeliveryType = "STORE_PICKUP" | "VIETNAM" | "OTHERS";
 
 type Order = {
   orderNumber: number;
@@ -153,7 +153,7 @@ const ShoppingCart = () => {
   );
 
   let deliFee = 0;
-  if (deli === "YANGON") {
+  if (deli === "VIETNAM") {
     deliFee = 2.0;
   } else if (deli === "OTHERS") {
     deliFee = 7.0;
@@ -368,13 +368,13 @@ const ShoppingCart = () => {
                         <input
                           type="radio"
                           name="deli"
-                          value="YANGON"
-                          id="ygn"
-                          checked={deli === "YANGON"}
-                          onChange={() => setDeli("YANGON")}
+                          value="VIETNAM"
+                          id="vie"
+                          checked={deli === "VIETNAM"}
+                          onChange={() => setDeli("VIETNAM")}
                           // defaultChecked
                         />{" "}
-                        <label htmlFor="ygn" className="cursor-pointer">
+                        <label htmlFor="vie" className="cursor-pointer">
                           {t("within_yangon")}
                         </label>
                       </div>
