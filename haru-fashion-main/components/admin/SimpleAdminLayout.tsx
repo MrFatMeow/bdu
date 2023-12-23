@@ -12,7 +12,7 @@ const SimpleAdminLayout = ({ children }: any) => {
           <Sider>
             <div className="logo">Logo</div>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-              <Menu.Item key="1" onClick={() => router.push("/cmsm/products")}>
+              <Menu.Item key="1" onClick={() => router.push("/cms/products")}>
                 Quản lý sản phẩm
               </Menu.Item>
               <Menu.Item key="2" onClick={() => router.push("/cms/customers")}>

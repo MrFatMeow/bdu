@@ -28,7 +28,7 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 
   // requested queries
   const querySelect = req.query.select;
-  const queryInclude = req.query.include;
+  const queryInclude = "category";
   const queryOrderBy = req.query.order_by;
   const queryOffset = req.query.offset;
   const queryLimit = req.query.limit;

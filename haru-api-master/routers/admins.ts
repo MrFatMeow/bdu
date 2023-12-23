@@ -7,7 +7,7 @@ import {
   getAdmins,
   getMe,
   loginAdmin,
-  seedData,
+  // seedData,
   updateAdmin,
   updateAdminSelf,
 } from "../controllers/admins";
@@ -24,7 +24,7 @@ router
 router
   .get("/me", adminOnly, getMe)
   .post("/login", loginAdmin)
-  .post("/seed", seedData)
+  // .post("/seed", seedData)
   .put("/change-password", adminOnly, changePassword);
 
 router

@@ -22,6 +22,7 @@ const CmsListCustomers = () => {
   const columns = [
     { title: "ID", dataIndex: "id", key: "id" },
     { title: "Tên", dataIndex: "fullname", key: "fullname" },
+    { title: "Email", dataIndex: "email", key: "email" },
     { title: "Số điện thoại", dataIndex: "phone", key: "phone" },
     {
       title: "Địa chỉ giao hàng",
@@ -30,6 +31,7 @@ const CmsListCustomers = () => {
     },
   ];
 
+  console.log("products", products)
   return (
     <div className="overflow-x-auto">
       <div className="text-xl font-bold mb-4 flex justify-between items-center">

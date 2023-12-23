@@ -1,17 +1,12 @@
-import prisma from "../prisma/client";
-import asyncHandler from "../middlewares/asyncHandler";
-import ErrorResponse from "../utils/errorResponse";
-import {
-  checkDeliveryType,
-  checkPaymentType,
-  checkRequiredFields,
-} from "../utils/helperFunctions";
 import {
   DeliveryType,
-  PaymentType,
   OrderDetail,
+  PaymentType,
   Product,
 } from ".prisma/client";
+import asyncHandler from "../middlewares/asyncHandler";
+import prisma from "../prisma/client";
+import emailTemplate from "../utils/emailTemplate";
 import {
   defaultError,
   deliveryTypeError,
@@ -19,9 +14,13 @@ import {
   paymentTypeError,
   resource404Error,
 } from "../utils/errorObject";
+import ErrorResponse from "../utils/errorResponse";
+import {
+  checkDeliveryType,
+  checkPaymentType,
+  checkRequiredFields,
+} from "../utils/helperFunctions";
 import sendMail from "../utils/sendEmail";
-import emailTemplate from "../utils/emailTemplate";
-import { Decimal } from "@prisma/client/runtime";
 
 /**
  * Get all orders
@@ -31,7 +30,12 @@ import { Decimal } from "@prisma/client/runtime";
 export const getOrders = asyncHandler(async (req, res, next) => {
   const orders = await prisma.order.findMany({
     include: {
-      orders: true,
+      orders: {
+        include: {
+          product: true,
+        },
+      },
+      customer: true,
     },
   });
   res.status(200).json({
@@ -43,7 +47,7 @@ export const getOrders = asyncHandler(async (req, res, next) => {
 
 /**
  * Get specific order
- * @route   GET /api/v1/orders
+ * @route   GET /api/v1/orders/:id
  * @access  Private (superadmin)
  */
 export const getOrder = asyncHandler(async (req, res, next) => {
@@ -52,7 +56,12 @@ export const getOrder = asyncHandler(async (req, res, next) => {
   const order = await prisma.order.findMany({
     where: { orderNumber: id },
     include: {
-      orders: true,
+      orders: {
+        include: {
+          product: true,
+        },
+      },
+      customer: true,
     },
   });
 

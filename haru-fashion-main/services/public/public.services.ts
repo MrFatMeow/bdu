@@ -24,4 +24,9 @@ export class PublicServices {
     const x = await axios.get(`${PublicAPIs.BASE_URL}/orders?${params}`);
     return x?.data;
   }
+
+  static async getOrderDetail(id: any) {
+    const x = await axios.get(`${PublicAPIs.BASE_URL}/orders/${id}`);
+    return x?.data?.data;
+  }
 }
